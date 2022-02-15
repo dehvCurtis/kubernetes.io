@@ -15,3 +15,9 @@ For a Pod to be given a QoS class of Guaranteed:
 - Every Container in the Pod must have a CPU limit and a CPU request.
 - For every Container in the Pod, the CPU limit must equal the CPU request.
 - These restrictions apply to init containers and app containers equally.
+
+## Burstable Class
+A Pod is given a QoS class of Burstable if:
+
+- The Pod does not meet the criteria for QoS class Guaranteed.
+- At least one Container in the Pod has a memory or CPU request.
